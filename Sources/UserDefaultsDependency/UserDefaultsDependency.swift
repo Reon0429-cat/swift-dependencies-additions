@@ -1,3 +1,4 @@
+import IssueReporting
 import Dependencies
 @_spi(Internals) import DependenciesAdditionsBasics
 import Foundation
@@ -251,7 +252,7 @@ extension UserDefaults {
 #endif
 extension UserDefaults.Dependency: TestDependencyKey {
   public static let testValue: Self = {
-    XCTFail(#"Unimplemented: @Dependency(\.userDefaults)"#)
+    reportIssue(#"Unimplemented: @Dependency(\.userDefaults)"#)
     return ephemeral()
   }()
 

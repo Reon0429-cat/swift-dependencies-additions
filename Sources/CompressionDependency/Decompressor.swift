@@ -1,3 +1,4 @@
+import IssueReporting
 #if canImport(Compression)
   import Compression
   import Dependencies
@@ -17,7 +18,7 @@
     }
 
     public static var testValue: Self {
-      XCTFail(#"Unimplemented: @Dependency(\.decompress)"#)
+      reportIssue(#"Unimplemented: @Dependency(\.decompress)"#)
       return .default
     }
 

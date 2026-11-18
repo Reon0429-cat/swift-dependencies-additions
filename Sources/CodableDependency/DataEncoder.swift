@@ -17,7 +17,7 @@ extension DependencyValues {
 extension DataEncoder: DependencyKey {
   public static var liveValue: DataEncoder { DataEncoder.json }
   public static var testValue: DataEncoder {
-    XCTFail(#"Unimplemented: @Dependency(\.encode)"#)
+    reportIssue(#"Unimplemented: @Dependency(\.encode)"#)
     return .json
   }
 }

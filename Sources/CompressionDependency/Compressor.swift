@@ -18,7 +18,7 @@
     }
 
     public static var testValue: Self {
-      XCTFail(#"Unimplemented: @Dependency(\.compress)"#)
+      reportIssue(#"Unimplemented: @Dependency(\.compress)"#)
       return .default
     }
 

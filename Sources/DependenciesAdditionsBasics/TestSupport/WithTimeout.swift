@@ -22,7 +22,7 @@ import IssueReporting
     group.addTask(operation: operation)
     group.addTask {
       try await Task.sleep(nanoseconds: milliseconds * NSEC_PER_MSEC)
-      XCTFail(description, file: file, line: line)
+      reportIssue(description, filePath: file, line: line)
     }
     defer { group.cancelAll() }
     try await group.next()
